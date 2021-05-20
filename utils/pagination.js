@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import qs from 'qs'
 
-const baseURL = 'https://api.helium.io/v1'
+const baseURL = 'https://api.cfidev.org/v1'
 
 const url = (path, params, cursor) => {
   let fullURL = baseURL + path

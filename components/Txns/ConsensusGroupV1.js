@@ -36,7 +36,7 @@ class ConsensusGroupV1 extends Component {
   loadData = async () => {
     // TODO: convert this to helium-js
     const res = await fetch(
-      `https://api.helium.io/v1/hotspots/elected/${this.props.txn.height}`,
+      `https://api.cfidev.org/v1/hotspots/elected/${this.props.txn.height}`,
     )
     const consensusHotspots = await res.json()
     this.setState({ consensusHotspots: consensusHotspots.data })

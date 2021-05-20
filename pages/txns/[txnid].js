@@ -296,7 +296,7 @@ export async function getStaticProps({ params }) {
     if (txn.location) {
       // TODO: add to helium-js
       const geoRes = await fetch(
-        `https://api.helium.io/v1/locations/${txn.location}`,
+        `https://api.cfidev.org/v1/locations/${txn.location}`,
       )
       const { data: geocode } = await geoRes.json()
       txn.geocode = geocode

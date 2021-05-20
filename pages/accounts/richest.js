@@ -119,10 +119,10 @@ function RichList({ accounts }) {
 
 export async function getStaticProps() {
   const [accounts, stats] = await Promise.all([
-    fetch('https://api.helium.io/v1/accounts/rich')
+    fetch('https://api.cfidev.org/v1/accounts/rich')
       .then((res) => res.json())
       .then(($) => $.data),
-    fetch('https://api.helium.io/v1/stats')
+    fetch('https://api.cfidev.org/v1/stats')
       .then((res) => res.json())
       .then(($) => $.data),
   ])
