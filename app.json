@@ -1,7 +1,7 @@
 {
   "name": "Helium Blockchain Explorer",
   "description": "A Helium blockchain explorer",
-  "website": "https://explorer.helium.com",
+  "website": "https://explorer.cfidev.org",
   "repository": "https://github.com/helium/explorer",
   "buildpacks": [
     {

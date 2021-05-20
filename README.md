@@ -1,6 +1,6 @@
 # Helium Blockchain Explorer
 
-Code that powers the official [Helium Blockchain Explorer](https://explorer.helium.com/).
+Code that powers the official [Helium Blockchain Explorer](https://explorer.cfidev.org/).
 
 ## Development and Contribution
 

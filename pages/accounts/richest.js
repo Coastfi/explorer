@@ -68,7 +68,7 @@ function RichList({ accounts }) {
       description={
         'The accounts on the Helium blockchain with the largest balances of HNT and HST'
       }
-      url={`https://explorer.helium.com/accounts/richest`}
+      url={`https://explorer.cfidev.org/accounts/richest`}
     >
       <Content
         style={{

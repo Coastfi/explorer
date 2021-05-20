@@ -111,8 +111,8 @@ const AccountView = ({ account }) => {
             : `, and ${hstBalanceObject.toString()}`
           : ''
       }, with the address ${account.address}`}
-      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/accounts.png`}
-      url={`https://explorer.helium.com/accounts/accounts/${account.address}`}
+      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/accounts.png`}
+      url={`https://explorer.cfidev.org/accounts/accounts/${account.address}`}
     >
       <Content
         style={{

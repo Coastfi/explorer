@@ -64,7 +64,7 @@ export const generateFriendlyTimestampString = (txnTime) => {
 }
 
 export const getMetaTagsForTransaction = (txn, isFallback) => {
-  const urlBase = 'https://explorer.helium.com'
+  const urlBase = 'https://explorer.cfidev.org'
   const ogImageUrlBase = `${urlBase}/images/og`
   let metaTags = {}
   let url = urlBase

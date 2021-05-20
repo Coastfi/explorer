@@ -38,8 +38,8 @@ function Market({
       description={
         'An overview of market data about the Helium Network Token (HNT) and Data Credits (DC)'
       }
-      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/market.png`}
-      url={`https://explorer.helium.com/market`}
+      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/market.png`}
+      url={`https://explorer.cfidev.org/market`}
     >
       <TopBanner icon={TokenImg} title="Market Data" />
 

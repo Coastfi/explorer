@@ -60,9 +60,9 @@ const Coverage = (props) => {
         title={'Coverage Map'}
         description={`View an interactive map of the Helium network and all the hotspots currently active around the world`}
         openGraphImageAbsoluteUrl={
-          'https://explorer.helium.com/images/og/coverage.png'
+          'https://explorer.cfidev.org/images/og/coverage.png'
         }
-        url={'https://explorer.helium.com/coverage'}
+        url={'https://explorer.cfidev.org/coverage'}
       />
       <title>Helium Network - Coverage</title>
       <Header activeNav="coverage" />

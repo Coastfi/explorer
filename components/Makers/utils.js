@@ -13,7 +13,7 @@ export const deprecatedHeliumMaker = {
   address: DEPRECATED_HELIUM_MAKER_ADDR,
   name: 'Helium Inc (Old)',
   // the number of gen_gateway_v1 txns in block 1
-  // https://explorer.helium.com/blocks/1
+  // https://explorer.cfidev.org/blocks/1
   // no reason to fetch this since it will never change
   genesisHotspots: 45,
 }

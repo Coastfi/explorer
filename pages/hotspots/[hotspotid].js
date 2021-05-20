@@ -95,8 +95,8 @@ const HotspotView = ({ hotspot }) => {
           ? `located in ${formatLocation(hotspot?.geocode)}`
           : `with no location asserted`
       }, belonging to account ${hotspot.owner}`}
-      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/hotspots.png`}
-      url={`https://explorer.helium.com/hotspots/${hotspot.address}`}
+      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/hotspots.png`}
+      url={`https://explorer.cfidev.org/hotspots/${hotspot.address}`}
     >
       <div className="bg-navy-500 mt-0 p-0">
         <div className="px-0 sm:px-5 my-0 mx-auto max-w-4xl">

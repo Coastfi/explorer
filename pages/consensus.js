@@ -83,8 +83,8 @@ const Consensus = ({
       description={
         'The current and most recent hotspots that have been elected to be part of a consensus group'
       }
-      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/consensus.png`}
-      url={`https://explorer.helium.com/consensus`}
+      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/consensus.png`}
+      url={`https://explorer.cfidev.org/consensus`}
     >
       <TopBanner icon={ConsensusImg} title="Consensus" />
       <div style={{ width: '100%', backgroundColor: '#324b61' }}>

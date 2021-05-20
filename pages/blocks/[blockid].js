@@ -79,8 +79,8 @@ const BlockView = ({ block, txns, height }) => {
       description={`Block ${block.height.toLocaleString()} of the Helium blockchain was produced ${generateFriendlyTimestampString(
         block.time,
       )}, with ${txns.length} transaction${txns.length !== 1 ? 's' : ''}`}
-      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/blocks.png`}
-      url={`https://explorer.helium.com/blocks/${block.height}`}
+      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/blocks.png`}
+      url={`https://explorer.cfidev.org/blocks/${block.height}`}
     >
       <Content
         style={{
