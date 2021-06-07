@@ -10,7 +10,7 @@ const getFee = async ({ height, fee }, convertFee) => {
   }
 
   if (convertFee) {
-    const client = new Client()
+    const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
     const { price: oraclePrice } = await client.oracle.getPriceAtBlock(height)
     const dcBalance = new Balance(fee.integerBalance, CurrencyType.dataCredit)
     const output = dcBalance

@@ -15,7 +15,7 @@ const HotspotChecklist = ({ hotspot, witnesses, height, heightLoading }) => {
     setShowChecklist((currentSetting) => !currentSetting)
 
   useEffect(() => {
-    const client = new Client()
+    const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
     const hotspotid = hotspot.address
 
     async function getActivityForChecklist() {

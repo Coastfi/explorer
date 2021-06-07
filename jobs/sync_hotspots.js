@@ -10,7 +10,7 @@ const index = algolia.initIndex('hotspots')
 const MAX_HOTSPOTS = 100000
 
 const syncHotspots = async () => {
-  const client = new Client()
+  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
 
   const hotspots = await client.hotspots.list()
   const allHotspots = await hotspots.take(MAX_HOTSPOTS)

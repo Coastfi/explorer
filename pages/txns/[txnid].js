@@ -155,7 +155,7 @@ const TxnView = ({ txn }) => {
   const [navigation, setNavigation] = useState()
 
   useEffect(async () => {
-    const client = new Client()
+    const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
     setTransactions(await client.block(txn.height).transactions.list())
   }, [txn.height])
 
@@ -288,7 +288,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const client = new Client()
+  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   const { txnid } = params
   let txn
   try {

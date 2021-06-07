@@ -66,10 +66,7 @@ class ActivityList extends Component {
   state = initialState
 
   async componentDidMount() {
-    this.client = new Client(new Network({
-      baseURL: 'http://api.cfidev.org',
-      version: 1,
-    }), { retry: 0 })
+    this.client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}), { retry: 0 })
     this.loadData()
   }
 

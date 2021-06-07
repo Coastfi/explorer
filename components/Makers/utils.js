@@ -19,7 +19,7 @@ export const deprecatedHeliumMaker = {
 }
 
 export const getMakersData = async () => {
-  const client = new Client()
+  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
 
   const makersResponse = await fetch(
     `https://onboarding.dewi.org/api/v2/makers`,

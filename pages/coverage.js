@@ -26,7 +26,7 @@ const Coverage = (props) => {
 
   useEffect(() => {
     const setupHotspotList = async () => {
-      const client = new Client()
+      const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
       setHotspotList(await client.hotspots.list())
     }
     setupHotspotList()
@@ -89,7 +89,7 @@ const Coverage = (props) => {
 export default Coverage
 
 export async function getStaticProps() {
-  const client = new Client()
+  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   const stats = await client.stats.get()
   const count = stats.counts.hotspots
 
