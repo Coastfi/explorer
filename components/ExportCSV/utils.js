@@ -1,5 +1,5 @@
 import animalHash from 'angry-purple-tiger'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import { Balance, CurrencyType } from '@helium/currency'
 import { fromUnixTime } from 'date-fns'
 import { getMakerName } from '../../components/Makers/utils'

@@ -4,7 +4,7 @@ import AccountIcon from '../AccountIcon'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import animalHash from 'angry-purple-tiger'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 
 import { formatLocation } from '../Hotspots/utils'
 import { Balance, CurrencyType } from '@helium/currency'

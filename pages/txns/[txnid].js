@@ -7,7 +7,7 @@ import {
   LeftOutlined,
   RightOutlined,
 } from '@ant-design/icons'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import Timestamp from 'react-timestamp'
 import AppLayout, { Content } from '../../components/AppLayout'
 import PieChart from '../../components/PieChart'

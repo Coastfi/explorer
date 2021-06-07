@@ -1,4 +1,4 @@
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 
 export const DEPRECATED_HELIUM_MAKER_ADDR =
   '14fzfjFcHpDR1rTH8BNPvSi5dKBbgxaDnmsVPbCjuq9ENjpZbxh'

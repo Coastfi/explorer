@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import { fetchAll } from '../utils/pagination'
 
 export const fetchLatestHotspots = async (count = 20) => {

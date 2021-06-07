@@ -1,5 +1,5 @@
 import React from 'react'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import countBy from 'lodash/countBy'
 import AppLayout from '../../components/AppLayout'
 import HotspotChart from '../../components/Hotspots/HotspotChart'

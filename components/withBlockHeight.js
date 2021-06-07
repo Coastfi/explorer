@@ -1,5 +1,5 @@
 import React from 'react'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 
 const withBlockHeight = (WrappedComponent) => {
   class BlockHeight extends React.Component {

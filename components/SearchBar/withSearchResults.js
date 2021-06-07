@@ -1,5 +1,5 @@
 import React from 'react'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import { Address } from '@helium/crypto'
 import debounce from 'lodash/debounce'
 

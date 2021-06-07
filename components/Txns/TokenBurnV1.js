@@ -3,7 +3,7 @@ import { Descriptions, Skeleton } from 'antd'
 import Link from 'next/link'
 import AccountIcon from '../AccountIcon'
 import { Balance, CurrencyType } from '@helium/currency'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 
 const InlineSkeleton = () => (
   <span className="inline-skeleton-override">

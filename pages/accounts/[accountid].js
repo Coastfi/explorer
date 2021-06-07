@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Typography, Descriptions, Tooltip, Tabs } from 'antd'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import AppLayout, { Content } from '../../components/AppLayout'
 import ActivityList from '../../components/ActivityList'
 import HotspotsList from '../../components/HotspotsList'

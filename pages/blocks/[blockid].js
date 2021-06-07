@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Table, Card } from 'antd'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import Timestamp from 'react-timestamp'
 import { TxnTag } from '../../components/Txns'
 import AppLayout, { Content } from '../../components/AppLayout'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import { Button, Modal, notification } from 'antd'
 import { ExportToCsv } from 'export-to-csv'
 import { parseTxn } from './utils'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import { Table, Card, Typography } from 'antd'
 import Timestamp from 'react-timestamp'
 import LoadMoreButton from '../LoadMoreButton'

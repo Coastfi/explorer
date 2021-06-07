@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Table, Descriptions } from 'antd'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import animalHash from 'angry-purple-tiger'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
