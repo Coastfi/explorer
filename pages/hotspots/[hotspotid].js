@@ -267,7 +267,7 @@ const HotspotView = ({ hotspot }) => {
 }
 
 export async function getServerSideProps({ params }) {
-  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   const { hotspotid } = params
   let hotspot
   try {

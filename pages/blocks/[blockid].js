@@ -241,7 +241,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   const { blockid } = params
   let block, txnList
   try {

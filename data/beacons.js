@@ -9,7 +9,7 @@ export const fetchLatestBeacons = (count = 100) => async () => {
 }
 
 export const fetchBeacon = async (hash) => {
-  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   const beacon = await client.transactions.get(hash)
 
   return JSON.parse(JSON.stringify(beacon))

@@ -9,7 +9,7 @@ const withBlockHeight = (WrappedComponent) => {
     }
 
     componentDidMount() {
-      this.client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+      this.client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
       this.loadBlockHeight()
       window.setInterval(this.loadBlockHeight, 25000)
     }

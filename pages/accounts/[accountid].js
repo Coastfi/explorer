@@ -51,7 +51,7 @@ const AccountView = ({ account }) => {
       setLoadingHotspots(true)
       setLoadingRewards(true)
 
-      const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+      const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
       const accountid = account.address
 
       const list = await client.account(accountid).hotspots.list()
@@ -267,7 +267,7 @@ const AccountView = ({ account }) => {
 }
 
 export async function getServerSideProps({ params }) {
-  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   const { accountid } = params
 
   let account

@@ -23,7 +23,7 @@ const TokenBurnV1 = ({ txn }) => {
 
   const [oraclePrice, setOraclePrice] = useState()
   useEffect(async () => {
-    const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+    const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
     const { price } = await client.oracle.getPriceAtBlock(txn.height)
     setOraclePrice(price)
   }, [])

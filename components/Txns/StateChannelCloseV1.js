@@ -66,7 +66,7 @@ class StateChannelCloseV1 extends Component {
 
   componentDidMount() {
     this.tallyValues()
-    this.client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+    this.client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
     this.loadData()
   }
 

@@ -141,7 +141,7 @@ const Hotspots = ({
 }
 
 export async function getStaticProps() {
-  const client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   const stats = await fetchStats()
   const hotspots = await (await client.hotspots.list()).take(100000)
 

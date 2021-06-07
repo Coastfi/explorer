@@ -23,7 +23,7 @@ class ExportModal extends React.Component {
   state = initialState
 
   componentDidMount() {
-    this.client = = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+    this.client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
   }
 
   showModal = () => this.setState({ open: true })
