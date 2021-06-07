@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Row, Typography, Tooltip, Tabs } from 'antd'
-import { Client } from '@helium/http'
+import { Client, Nework } from '@helium/http'
 import Fade from 'react-reveal/Fade'
 import Checklist from '../../components/Hotspots/Checklist/Checklist'
 import RewardSummary from '../../components/Hotspots/RewardSummary'

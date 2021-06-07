@@ -4,7 +4,7 @@ import Header from '../components/CoverageMap/Header'
 import Page from '../components/CoverageMap/Page'
 import dynamic from 'next/dynamic'
 import HotspotSidebar from '../components/CoverageMap/HotspotSidebar'
-import { Client } from '@helium/http'
+import { Client, Network } from '@helium/http'
 import MetaTags from '../components/AppLayout/MetaTags'
 
 const Map = dynamic(() => import('../components/CoverageMap/CoverageMap'), {

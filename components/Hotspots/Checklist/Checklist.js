@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import ChecklistCard from './ChecklistCard'
 import { Tooltip } from 'antd'
 import withBlockHeight from '../../withBlockHeight'
-import { Client } from '@helium/http'
+import { Client, Network } from '@helium/http'
 import classNames from 'classnames'
 
 const HotspotChecklist = ({ hotspot, witnesses, height, heightLoading }) => {
