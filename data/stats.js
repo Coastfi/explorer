@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import Client, { Network } from '@helium/http'
 
 export const fetchStats = async () => {
-  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const stats = await client.stats.get()
 
   return {

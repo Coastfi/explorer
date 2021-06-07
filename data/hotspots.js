@@ -3,7 +3,7 @@ import Client, { Network } from '@helium/http'
 import { fetchAll } from '../utils/pagination'
 
 export const fetchLatestHotspots = async (count = 20) => {
-  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const hotspots = await (await client.hotspots.list()).take(count)
 
   return JSON.parse(JSON.stringify(hotspots))
@@ -23,7 +23,7 @@ export const useLatestHotspots = (initialData, count = 20) => {
 }
 
 const MAX = 100000
-const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
 
 export const getHotspotRewardsSum = async (address, numDaysBack) => {
   const initialDate = new Date()
@@ -57,7 +57,7 @@ export const fetchNearbyHotspots = async (lat, lon, distance = 1000) => {
 }
 
 export const fetchHotspot = async (address) => {
-  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const hotspot = await client.hotspots.get(address)
   return JSON.parse(JSON.stringify(hotspot))
 }

@@ -21,7 +21,7 @@ class BeaconsList extends Component {
   state = initialState
 
   async componentDidMount() {
-    this.client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+    this.client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
     this.loadData()
   }
 

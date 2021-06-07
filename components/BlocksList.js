@@ -13,7 +13,7 @@ class BlocksList extends Component {
   }
 
   async componentDidMount() {
-    const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+    const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
     this.list = await client.blocks.list()
     this.loadBlocks()
   }

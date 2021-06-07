@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import Client, { Network } from '@helium/http'
 
 export const fetchElections = async () => {
-  const client = new Client(new Network({baseURL: 'http://api.cfidev.org', version: 1}))
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const list = await client.elections.list()
   const elections = await list.take(20)
 
