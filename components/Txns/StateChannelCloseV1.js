@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Table, Descriptions } from 'antd'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 import animalHash from 'angry-purple-tiger'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
@@ -66,7 +66,7 @@ class StateChannelCloseV1 extends Component {
 
   componentDidMount() {
     this.tallyValues()
-    this.client = new Client()
+    this.client = Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
     this.loadData()
   }
 

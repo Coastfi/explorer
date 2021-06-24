@@ -30,8 +30,8 @@ function Blocks({ stats: initialStats, latestBlocks: initialLatestBlocks }) {
       description={
         'The current state of the Helium blockchain, including statistics about transaction rates, election time, and block times'
       }
-      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/blocks.png`}
-      url={`https://explorer.helium.com/accounts/blocks`}
+      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/blocks.png`}
+      url={`https://explorer.cfidev.org/accounts/blocks`}
     >
       <TopBanner title="Blocks" icon={BlocksImg} />
 

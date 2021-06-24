@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Row, Typography, Tooltip, Tabs } from 'antd'
-import { Client } from '@helium/http'
+import Client, { Network } from '@helium/http'
 import Fade from 'react-reveal/Fade'
 import Checklist from '../../components/Hotspots/Checklist/Checklist'
 import RewardSummary from '../../components/Hotspots/RewardSummary'
@@ -55,7 +55,7 @@ const HotspotView = ({ hotspot }) => {
 
     async function getWitnesses() {
       setWitnessesLoading(true)
-      const client = new Client()
+      const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
       const witnessesList = await client.hotspot(hotspotid).witnesses.list()
       let witnesses = []
       for await (const w of witnessesList) {
@@ -98,8 +98,8 @@ const HotspotView = ({ hotspot }) => {
           ? `located in ${formatLocation(hotspot?.geocode)}`
           : `with no location asserted`
       }, belonging to account ${hotspot.owner}`}
-      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/hotspots.png`}
-      url={`https://explorer.helium.com/hotspots/${hotspot.address}`}
+      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/hotspots.png`}
+      url={`https://explorer.cfidev.org/hotspots/${hotspot.address}`}
     >
       <div className="bg-navy-500 mt-0 p-0">
         <div className="px-0 sm:px-5 my-0 mx-auto max-w-4xl">
@@ -270,7 +270,7 @@ const HotspotView = ({ hotspot }) => {
 }
 
 export async function getServerSideProps({ params }) {
-  const client = new Client()
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const { hotspotid } = params
   let hotspot
   try {

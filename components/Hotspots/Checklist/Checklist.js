@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import ChecklistCard from './ChecklistCard'
 import { Tooltip } from 'antd'
 import withBlockHeight from '../../withBlockHeight'
-import { Client } from '@helium/http'
+import Client, { Network } from '@helium/http'
 import classNames from 'classnames'
 
 const HotspotChecklist = ({ hotspot, witnesses, height, heightLoading }) => {
@@ -15,7 +15,7 @@ const HotspotChecklist = ({ hotspot, witnesses, height, heightLoading }) => {
     setShowChecklist((currentSetting) => !currentSetting)
 
   useEffect(() => {
-    const client = new Client()
+    const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
     const hotspotid = hotspot.address
 
     async function getActivityForChecklist() {

@@ -4,7 +4,7 @@ import Header from '../components/CoverageMap/Header'
 import Page from '../components/CoverageMap/Page'
 import dynamic from 'next/dynamic'
 import HotspotSidebar from '../components/CoverageMap/HotspotSidebar'
-import { Client } from '@helium/http'
+import Client, { Network } from '@helium/http'
 import MetaTags from '../components/AppLayout/MetaTags'
 import { useContext } from 'react'
 import BetaBannerContext from '../components/BetaBanner/BannerContext'
@@ -28,7 +28,7 @@ const Coverage = (props) => {
 
   useEffect(() => {
     const setupHotspotList = async () => {
-      const client = new Client()
+      const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
       setHotspotList(await client.hotspots.list())
     }
     setupHotspotList()
@@ -64,9 +64,9 @@ const Coverage = (props) => {
         title={'Coverage Map'}
         description={`View an interactive map of the Helium network and all the hotspots currently active around the world`}
         openGraphImageAbsoluteUrl={
-          'https://explorer.helium.com/images/og/coverage.png'
+          'https://explorer.cfidev.org/images/og/coverage.png'
         }
-        url={'https://explorer.helium.com/coverage'}
+        url={'https://explorer.cfidev.org/coverage'}
       />
       <title>Helium Network - Coverage</title>
       <Header activeNav="coverage" />
@@ -95,7 +95,7 @@ const Coverage = (props) => {
 export default Coverage
 
 export async function getStaticProps() {
-  const client = new Client()
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const stats = await client.stats.get()
   const count = stats.counts.hotspots
 

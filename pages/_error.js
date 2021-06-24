@@ -52,7 +52,7 @@ const Error = ({ statusCode, statusMessage }) => {
             <HelpLink href="/market">Market Data</HelpLink>
             <HelpLink href="/consensus">Consensus</HelpLink>
             <HelpLink href="/coverage">Coverage Map</HelpLink>
-            <HelpLink href="https://www.helium.com/" external>
+            <HelpLink href="https://www.cfidev.org/" external>
               helium.com
             </HelpLink>
           </HelpLinkList>

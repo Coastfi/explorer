@@ -1,8 +1,8 @@
 import useSWR from 'swr'
-import Client from '@helium/http'
+import Client, { Network } from '@helium/http'
 
 export const fetchStats = async () => {
-  const client = new Client()
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const stats = await client.stats.get()
 
   return {
@@ -34,7 +34,7 @@ export const useStats = (initialData) => {
 
 export const fetchCitiesByOnline = async () => {
   const citiesResOnline = await fetch(
-    'https://api.helium.io/v1/cities?order=online_count',
+    'https://api.cfidev.org/v1/cities?order=online_count',
   )
   const { data } = await citiesResOnline.json()
   return JSON.parse(JSON.stringify(data))
@@ -42,7 +42,7 @@ export const fetchCitiesByOnline = async () => {
 
 export const fetchCitiesByTotal = async () => {
   const citiesResTotal = await fetch(
-    'https://api.helium.io/v1/cities?order=hotspot_count',
+    'https://api.cfidev.org/v1/cities?order=hotspot_count',
   )
   const { data } = await citiesResTotal.json()
   return JSON.parse(JSON.stringify(data))
