@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Row, Typography, Tooltip, Tabs } from 'antd'
-import Client, { Network } from '@helium/http'
+import { Client } from '@helium/http'
 import Fade from 'react-reveal/Fade'
 import Checklist from '../../components/Hotspots/Checklist/Checklist'
 import RewardSummary from '../../components/Hotspots/RewardSummary'
@@ -55,12 +55,15 @@ const HotspotView = ({ hotspot }) => {
 
     async function getWitnesses() {
       setWitnessesLoading(true)
-      // // TODO convert to use @helium/http
-      const witnesses = await fetch(
-        `https://api.cfidev.org/v1/hotspots/${hotspotid}/witnesses`,
-      )
-        .then((res) => res.json())
-        .then((json) => json.data.filter((w) => !(w.address === hotspotid)))
+      const client = new Client()
+      const witnessesList = await client.hotspot(hotspotid).witnesses.list()
+      let witnesses = []
+      for await (const w of witnessesList) {
+        const witness = JSON.parse(JSON.stringify(w))
+        if (!(w.address === hotspotid)) {
+          witnesses.push(witness)
+        }
+      }
       setWitnesses(witnesses)
       setWitnessesLoading(false)
     }
@@ -95,8 +98,8 @@ const HotspotView = ({ hotspot }) => {
           ? `located in ${formatLocation(hotspot?.geocode)}`
           : `with no location asserted`
       }, belonging to account ${hotspot.owner}`}
-      openGraphImageAbsoluteUrl={`https://explorer.cfidev.org/images/og/hotspots.png`}
-      url={`https://explorer.cfidev.org/hotspots/${hotspot.address}`}
+      openGraphImageAbsoluteUrl={`https://explorer.helium.com/images/og/hotspots.png`}
+      url={`https://explorer.helium.com/hotspots/${hotspot.address}`}
     >
       <div className="bg-navy-500 mt-0 p-0">
         <div className="px-0 sm:px-5 my-0 mx-auto max-w-4xl">
@@ -155,7 +158,7 @@ const HotspotView = ({ hotspot }) => {
                     {hotspot.rewardScale && (
                       <RewardScalePill hotspot={hotspot} className="ml-2.5" />
                     )}
-                    {isRelay(hotspot.status.listen_addrs) && (
+                    {isRelay(hotspot.status.listenAddrs) && (
                       <RelayPill className="ml-2.5" />
                     )}
                   </div>
@@ -267,7 +270,7 @@ const HotspotView = ({ hotspot }) => {
 }
 
 export async function getServerSideProps({ params }) {
-  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
+  const client = new Client()
   const { hotspotid } = params
   let hotspot
   try {

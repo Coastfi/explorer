@@ -8,7 +8,7 @@
     "@ensdomains/ensjs": "^2.0.0",
     "@helium/crypto": "^3.1.0",
     "@helium/currency": "^3.0.0",
-    "@helium/http": "^3.31.0",
+    "@helium/http": "^3.36.0",
     "@mapbox/mapbox-sdk": "^0.11.0",
     "@next/bundle-analyzer": "^10.0.6",
     "@testing-library/jest-dom": "^4.2.4",
@@ -59,7 +59,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3000",
+    "start": "next start -p $PORT",
     "pretty": "prettier --write \"./**/*.{js,jsx,json,css}\"",
     "job": "eval $(cat .env) node"
   },
