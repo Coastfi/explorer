@@ -13,8 +13,7 @@ const BetaBanner = () => {
           target="_blank"
         >
           <p className="m-0">
-            Psst! We've been working on a new Explorer and we'd love for you to
-            try it out and let us know what you think. Check it out {'->'}
+            Check out beta explorer on helium.com {'->'}
           </p>
         </a>
         <button
