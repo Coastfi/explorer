@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Table, Descriptions } from 'antd'
-import Client, { Network } from '@helium/http'
+import Client from '@helium/http'
 import animalHash from 'angry-purple-tiger'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
@@ -66,7 +66,7 @@ class StateChannelCloseV1 extends Component {
 
   componentDidMount() {
     this.tallyValues()
-    this.client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
+    this.client = new Client()
     this.loadData()
   }
 
@@ -138,7 +138,7 @@ class StateChannelCloseV1 extends Component {
             {totalHotspots.toLocaleString()}
           </Descriptions.Item>
           <Descriptions.Item label="State Channel ID" span={3}>
-              {txn.stateChannel.id}
+            {txn.stateChannel.id}
           </Descriptions.Item>
           <Descriptions.Item label="State Channel Closer" span={3}>
             <Link href={'/accounts/' + txn.closer}>
