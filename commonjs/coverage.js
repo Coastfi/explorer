@@ -11,7 +11,7 @@ const toGeoJSON = (hotspots) =>
 
 const getCoverage = async () => {
   // TODO switch back to prod API when things are better
-  const client = new Client(Network.staging)
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const list = await client.hotspots.list()
   const hotspots = await list.takeJSON(MAX_HOTSPOTS_TO_FETCH)
   const hotspotsWithLocation = hotspots

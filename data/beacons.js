@@ -2,7 +2,7 @@ import useSWR from 'swr'
 import Client, { Network } from '@helium/http'
 
 export const fetchLatestBeacons = (count = 100) => async () => {
-  const client = new Client(Network.staging)
+  const client = new Client(new Network({baseURL: 'https://api.cfidev.org', version: 1}))
   const beacons = await (await client.challenges.list()).take(count)
 
   return JSON.parse(JSON.stringify(beacons))
